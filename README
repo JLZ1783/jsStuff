@@ -1,0 +1,16 @@
+We need to loop through random sets of strings
+grouped by 1000's to insert into a SQL Stored Proc
+That communicates to a remote Oracle server 
+via some version OpenQuery for cerner:
+
+These groups will be inserted into a 
+"WHERE <value> in (<our group>)"
+
+Haven't decided on how we should interact 
+the stored proc should~
+
+Option 1:  We dynamically create the execute string using
+the output from groupLoops.js
+
+In this case we can take in the exec string 
+then write to somewhere to be copy/pasted into SSMS. 
